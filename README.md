@@ -8,6 +8,7 @@ Universidad Internacional de Valencia*
 
 Prof: Dr. Horacio Kuna
 Dictado: OCT23-24
+Alumno: Jhon Fajardo Rodas
 
 ## Descripción del contenido
 
