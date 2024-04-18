@@ -3,7 +3,7 @@
 En este documento se presenta una guía de uso de la librería **dvc** para realizar gestión de versiones de archivos de datos.
 
 >[!NOTE]
-> En la [documentación oficial(https://dvc.org/doc/start/data-management/data-versioning)] de la herramienta se encuentra una guía similar a esta.
+> En la [documentación oficial](https://dvc.org/doc/start/data-management/data-versioning) de la herramienta se encuentra una guía similar a esta.
 
 Esquema de pasos a seguir:
 
