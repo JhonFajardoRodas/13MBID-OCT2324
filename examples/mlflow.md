@@ -3,7 +3,7 @@
 En este documento se presenta una guía de uso de la librería **mlfow** para realizar gestión de versiones de experimentación y modelos de aprendizaje automático.
 
 >[!NOTE]
-> En la [documentación oficial(https://mlflow.org/docs/latest/quickstart.html)] de la herramienta se encuentra una guía extendida de estos pasos.
+> En la [documentación oficial](https://mlflow.org/docs/latest/quickstart.html) de la herramienta se encuentra una guía extendida de estos pasos.
 
 Esquema de pasos a seguir:
 
