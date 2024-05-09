@@ -9,7 +9,7 @@ df = pd.read_csv("../../../data/final/datos_finales.csv", sep=";")
 # Título del dashboard
 st.write("# 13MBID - Visualización de datos")
 st.write("## Panel de visualización generado sobre los datos de créditos y tarjetas emitidas a clientes de la entidad")
-st.write("#### Persona/s: ................")
+st.write("#### Persona/s: Jhon Fajardo Rodas")
 st.write("----")
 
 # Gráficos
@@ -80,6 +80,8 @@ option = st.selectbox(
      df['objetivo_credito'].unique())
 
 df_filtrado = df[df['objetivo_credito'] == option]
+
+
 
 st.write(f"Tipo de crédito seleccionado: {option}")
  
