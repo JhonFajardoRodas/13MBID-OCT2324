@@ -75,30 +75,30 @@ st.plotly_chart(fig)
 
 # Filtros
 
-#option = st.selectbox(
- #   'Qué tipo de crédito desea filtrar?',
-  #   df['objetivo_credito'].unique())
+option = st.selectbox(
+    'Qué tipo de crédito desea filtrar?',
+     df['objetivo_credito'].unique())
 
-#df_filtrado = df[df['objetivo_credito'] == option]
+df_filtrado = df[df['objetivo_credito'] == option]
 
-#st.write(f"Tipo de crédito seleccionado: {option}")
+st.write(f"Tipo de crédito seleccionado: {option}")
+ 
+if st.checkbox('Mostrar créditos finalizados?', value=True):
 
-#if st.checkbox('Mostrar créditos finalizados?', value=True):
-
-    # Conteo de ocurrencias por estado
- #   estado_credito_counts = df_filtrado['estado_credito_N'].value_counts()
+    #Conteo de ocurrencias por estado
+    estado_credito_counts = df_filtrado['estado_credito_N'].value_counts()
 
     # Gráfico de torta de estos valores
-  #  fig = go.Figure(data=[go.Pie(labels=estado_credito_counts.index, values=estado_credito_counts)])
-   # fig.update_layout(title_text='Distribución de créditos por estado registrado')
-#else:
- #   df_filtrado = df_filtrado[df_filtrado['estado_credito_N'] == 'P']
-    # Conteo de ocurrencias por caso
-  #  falta_pago_counts = df_filtrado['falta_pago'].value_counts()
+    fig = go.Figure(data=[go.Pie(labels=estado_credito_counts.index, values=estado_credito_counts)])
+    fig.update_layout(title_text='Distribución de créditos por estado registrado')
+else:
+    df_filtrado = df_filtrado[df_filtrado['estado_credito_N'] == 'P']
+    #Conteo de ocurrencias por caso
+    falta_pago_counts = df_filtrado['falta_pago'].value_counts()
 
     # Create a Pie chart
-    #fig = go.Figure(data=[go.Pie(labels=falta_pago_counts.index, values=falta_pago_counts)])
-    #fig.update_layout(title_text='Distribución de créditos en función de registro de mora')
+    fig = go.Figure(data=[go.Pie(labels=falta_pago_counts.index, values=falta_pago_counts)])
+    fig.update_layout(title_text='Distribución de créditos en función de registro de mora')
 
-#st.write(f"Cantidad de créditos con estas condiciones: {df_filtrado.shape[0]}")
-#st.plotly_chart(fig)
+st.write(f"Cantidad de créditos con estas condiciones: {df_filtrado.shape[0]}")
+st.plotly_chart(fig)
